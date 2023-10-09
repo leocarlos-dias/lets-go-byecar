@@ -16,7 +16,7 @@
 
 ## 📖 Sobre
 
-Bem-vindo ao **Lets Go Byecar**! Este projeto foi criado como um desafio para simular autenticação e recuperação de informações de usuários por meio de um token de uma API externa. Compreende uma interface client-side de 4 páginas e um backend server-side.
+Bem-vindo ao **Lets Go Byecar**! Este projeto foi criado como um desafio para simular autenticação e recuperação de informações de usuários por meio de um token de uma API externa. Compreende uma interface client-side de 4 páginas e um backend server-side simulando uma comunicação com uma API terceira.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -72,7 +72,7 @@ server
 
 ## 🎯 Visão Geral
 
-**Lets Go Byecar** proporciona uma experiência client-side interativa através de suas 4 páginas distintas, facilitando a navegação dos usuários via botões no cabeçalho. A dinâmica de comunicação com o server-side é uma simulação de interações típicas com uma API terceira.
+**Lets Go Byecar** proporciona uma experiência client-side interativa através de suas 4 páginas distintas. Através dos botões no cabeçalho, os usuários podem navegar entre essas páginas.  Na primeira página, é realizada uma requisição ao server-side solicitando um token de autorização. Com este token, na quarta página, os usuários podem buscar informações detalhadas fornecidas pela [Random Users API](https://randomuser.me/).
 
 ### Client-Side:
 
@@ -131,6 +131,10 @@ Ao fornecer o token válido na quarta página, os usuários podem recuperar info
 ## 🧪 Testes
 
 Para executar os testes, vá para o diretório `server` e execute `npm run test` ou `yarn test`.
+
+## 📌 Nota Importante
+
+A documentação das rotas desta API está disponível no arquivo [documentation.md](./documentation.md) neste repositório.
 
 ## 💌 Contato
 
