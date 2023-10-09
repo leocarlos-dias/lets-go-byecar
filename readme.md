@@ -9,9 +9,14 @@
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
+👤 **Leonardo Carlos Dias**
+
+🌐 [Portfólio](https://leocarlos-dias.github.io/personal-portfolio/)  
+🔗 [LinkedIn](https://www.linkedin.com/in/leonardocsdias/)
+
 ## 📖 Sobre
 
-Bem-vindo ao repositório do projeto **Lets Go Byecar**. Desafiado pela empresa, este projeto combina uma interface client-side de 4 páginas e um backend server-side para simular autenticação e recuperação de informações de usuários via token de uma API terceira.
+Bem-vindo ao **Lets Go Byecar**! Este projeto foi criado como um desafio para simular autenticação e recuperação de informações de usuários por meio de um token de uma API externa. Compreende uma interface client-side de 4 páginas e um backend server-side.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -25,26 +30,34 @@ Bem-vindo ao repositório do projeto **Lets Go Byecar**. Desafiado pela empresa,
 ## 📁 Estrutura do Projeto
 
 ```
-.
-├── client
-├── public
-└── src
-├── components
-├── hooks
-└── ...
+client
+  │
+  ├── public
+  │
+  ├── src
+  │ └── components
+  │ └── hooks
+  | └── ...
+  |
+  └── ...
+
+
 
 server
-└── src
-├── application
-│ └── usecase
-├── domain
-│ └── entities
-├── infrastructure
-│ ├── controllers
-│ ├── http
-│ ├── routes
-│ └── services
-└── ...
+  └── src
+    ├── application
+    │ └── usecase
+    │
+    ├── domain
+    │ └── entities
+    │
+    ├── infrastructure
+    │ └── controllers
+    │ └── http
+    │ └── routes
+    │ └── services
+    |
+    └── ...
 ```
 
 ## 📑 Índice
@@ -57,55 +70,72 @@ server
 - [Contato](#contato)
 - [Contribuições](#contribuições)
 
-### Visão Geral
+## 🎯 Visão Geral
 
-O **Lets Go Byecar** é composto por 4 páginas na parte client-side. Através dos botões no cabeçalho, os usuários podem navegar entre essas páginas. Na primeira página, é realizada uma requisição ao server-side solicitando um token de autorização, simulando uma comunicação com uma API terceira. Com este token, na quarta página, os usuários podem buscar informações detalhadas fornecidas pela mesma API.
+**Lets Go Byecar** proporciona uma experiência client-side interativa através de suas 4 páginas distintas, facilitando a navegação dos usuários via botões no cabeçalho. A dinâmica de comunicação com o server-side é uma simulação de interações típicas com uma API terceira.
 
-A API server-side possui dois endpoints:
+### Client-Side:
 
-* /login
-* /users
+- **Tema Dual**: O cliente vem com dois temas de cores: **escuro** e **claro**. A escolha do usuário para o tema persiste mesmo após atualizar a página, proporcionando uma experiência de usuário personalizada.
+  
+- **Página de Solicitação de Token**: Onde, ao ser acessada, o usuário é automaticamente autenticado e recebe um token de autorização.
+  
+- **Página 2 & Página 3**: Páginas intermediárias para navegação.
+  
+- **Página de Busca de Informações do Usuário**: Usando o token obtido, os usuários podem buscar informações detalhadas.
 
-O primeiro endpoint é responsável por simular a requisição de um token de autorização a uma API terceira. O segundo endpoint é responsável por simular a requisição de informações do usuário a uma API terceira.
+### Server-Side:
 
-O login é realizado com um email e senha padrão, que são <code>email@example.com</code> e <code>example.password</code>, respectivamente. O token de autorização é gerado com base no usuário e senha fornecidos, e é válido por 60 minutos.
+- **Endpoints**:
+  - `/login`: Simula a obtenção automática de um token de autorização ao acessar a primeira página.
+  - `/users`: Simula a recuperação de informações do usuário usando o token.
 
-Para buscar as informações do usuário, é necessário fornecer o token de autorização obtido anteriormente. Este token é verificado e, se válido, as informações do usuário são retornadas.
+- **Credenciais para Login**:
+  - Email: `email@example.com`
+  - Senha: `example.password`
 
-### Navegação Client-Side
+- **Autenticação**: No momento em que a primeira página é acessada, um token de autorização válido por 60 minutos é gerado automaticamente.
 
-O aplicativo client-side dispõe de 4 páginas principais:
+- **Recuperação de Informações**: Apresenta informações do usuário após verificar a validade do token fornecido.
 
-1. Página de Solicitação de Token
-2. Página 2
-3. Página 3
-4. Página de Busca de Informações do Usuário
+## 🚀 Navegação Client-Side
 
-### Autenticação via Token
+Os usuários podem se deslocar confortavelmente entre quatro páginas principais, incluindo uma para solicitar um token e outra para buscar informações do usuário com o token obtido.
 
-O token de autorização é solicitado na primeira página e é fornecido pelo server-side, simulando uma interação com uma API terceira. Este token é essencial para acessar recursos protegidos no aplicativo, como a busca de informações do usuário na quarta página.
+## 🔒 Autenticação via Token
 
-### Busca de Informações do Usuário
+A autenticação ocorre automaticamente ao acessar a primeira página, gerando um token de autorização que permite aos usuários acessar recursos específicos, como a busca de informações do usuário.
 
-Com o token em mãos, na quarta página, os usuários podem buscar suas informações detalhadas. Essa busca é processada pelo server-side, que consulta a API terceira e recupera as informações do usuário associadas ao token.
+## 🔍 Busca de Informações do Usuário
 
-### Instalação e Execução
+Ao fornecer o token válido na quarta página, os usuários podem recuperar informações detalhadas do usuário. Esta consulta é tratada pelo server-side que, por sua vez, simula uma interação com uma API terceira.
+
+## 💻 Instalação e Execução
+
+### Para a pasta `client`
 
 1. Clone o repositório.
-2. Acesse o diretório `client` e depois `server`.
+2. Acesse o diretório `client`.
 3. Instale as dependências com `npm install` ou `yarn install`.
-4. Execute o projeto com `npm start` ou `yarn start`.
+4. Execute o projeto com `npm run dev` ou `yarn dev`.
 
-O `client` será executado na porta `5173`, já o `server` será executado na porta `3001`.
+### Para a pasta `server`
 
-### Testes
+1. Acesse o diretório `server`.
+2. Instale as dependências com `npm install` ou `yarn install`.
+3. Crie um arquivo `.env` baseando-se no arquivo `.env.example` e configure as variáveis de ambiente conforme indicado.
+4. Execute o projeto com `npm run dev` ou `yarn dev`.
+
+> **Nota**: O `client` será executado na porta `5173`, já o `server` será executado na porta `3001`.
+
+## 🧪 Testes
 
 Para executar os testes, vá para o diretório `server` e execute `npm run test` ou `yarn test`.
 
-### Contato
+## 💌 Contato
 
-Para quaisquer dúvidas ou feedbacks, por favor entre em contato através de [leocsdias@hotmail.com].
+Em caso de dúvidas ou feedbacks, entre em contato por [email](mailto:leocsdias@hotmail.com).
 
-### 🤝 Contribuições
+## 🤝 Contribuições
 
 Todas as contribuições são bem-vindas! Se desejar melhorar o **Lets Go Byecar**, sinta-se à vontade para abrir um pull request ou uma issue.
