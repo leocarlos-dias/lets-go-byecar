@@ -24,13 +24,11 @@ export class GetUserByTokenUseCase implements IGetUserByTokenUseCase {
     this.verifyToken(token);
    
     const response = await this.fetchUserFromAPI(token);
-    console.log(response)
     const user = User.create(
       `${response.results[0].name.first} ${response.results[0].name.last}`,
       response.results[0].email,
       response.results[0].cell
     );
-      console.log(user)
     return user;
   }
 

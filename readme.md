@@ -130,7 +130,7 @@ Ao fornecer o token válido na quarta página, os usuários podem recuperar info
 
 ## 🧪 Testes
 
-Para executar os testes, vá para o diretório `server` e execute `npm run test` ou `yarn test`.
+Para executar os testes, vá para o diretório `server` e execute `npx jest` ou `yarn test`.
 
 ## 📌 Nota Importante
 
